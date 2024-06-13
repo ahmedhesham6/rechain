@@ -1,0 +1,12 @@
+{
+  "extends": ["@rechain/tsconfig/react.json"],
+  "compilerOptions": {
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".storybook/**/*", "**/*.cjs", "**/*.js"],
+  "exclude": ["dist", "node_modules", "storybook-static"]
+}

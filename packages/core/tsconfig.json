@@ -1,0 +1,7 @@
+{
+  "extends": ["@rechain/tsconfig/base.json"],
+  "compilerOptions": {
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo"
+  },
+  "include": ["**/*.ts", "**/*.js"]
+}

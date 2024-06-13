@@ -1,0 +1,16 @@
+{
+  "name": "@rechain/tsconfig",
+  "version": "0.3.3",
+  "private": true,
+  "description": "A package to share tsconfig presets around the workspace",
+  "license": "MIT",
+  "author": "Rechain",
+  "type": "module",
+  "files": [
+    "./base.json",
+    "./next.json",
+    "./react.json"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

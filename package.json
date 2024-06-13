@@ -1,0 +1,75 @@
+{
+  "name": "rechain",
+  "private": true,
+  "description": "A comprehensive, opinionated company monorepo boilerplate",
+  "license": "MIT",
+  "author": "Rechain",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/config/*"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "format": "bun format:write",
+    "format:check": "prettier \"**/*\" --ignore-unknown --list-different",
+    "format:write": "prettier \"**/*\" --ignore-unknown --list-different --write",
+    "lint": "eslint .  --max-warnings 0",
+    "lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\" --ignore node_modules",
+    "lint:spell": "cspell \"**\"",
+    "prepare": "husky",
+    "release": "turbo run build lint typecheck && changeset version && changeset publish",
+    "reset:changelog": "bun run rm -rf **/CHANGELOG.md",
+    "typecheck": "tsc",
+    "update:workspace": "bun run ./scripts/update-workspace"
+  },
+  "lint-staged": {
+    "*": [
+      "cspell --no-must-find-files",
+      "prettier --list-different"
+    ],
+    "**/*.{ts,tsx,js,jsx,cjs,mjs}": [
+      "eslint"
+    ],
+    "**/*.{md,mdx}": [
+      "markdownlint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@changesets/cli": "^2.27.5",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@playwright/test": "^1.44.1",
+    "@rechain/eslint": "workspace:^",
+    "@rechain/tsconfig": "workspace:^",
+    "@types/bun": "latest",
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.14.2",
+    "@types/yargs": "^17.0.32",
+    "commitizen": "^4.3.0",
+    "cspell": "^8.8.4",
+    "eslint": "^9.4.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "markdownlint": "^0.34.0",
+    "markdownlint-cli": "^0.41.0",
+    "pkg-types": "^1.1.1",
+    "prettier": "^3.3.2",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-curly": "^0.2.1",
+    "prettier-plugin-packagejson": "^2.5.0",
+    "turbo": "^2.0.3",
+    "typescript": "^5.4.5",
+    "yargs": "^17.7.2"
+  },
+  "packageManager": "bun@1.1.12"
+}

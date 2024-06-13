@@ -1,0 +1,8 @@
+{
+  "extends": ["@rechain/tsconfig/base.json"],
+  "compilerOptions": {
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  },
+  "include": ["**/*.ts", "**/*.mjs", "**/*.js", "**/*.cjs"]
+}

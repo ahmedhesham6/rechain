@@ -1,0 +1,36 @@
+{
+  "name": "@rechain/api",
+  "version": "0.3.3",
+  "private": true,
+  "description": "A tRPC API package used in the web application",
+  "license": "MIT",
+  "author": "Rechain",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "lint": "eslint .  --max-warnings 0",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@rechain/auth": "workspace:^",
+    "@rechain/db": "workspace:^",
+    "@rechain/env": "workspace:^",
+    "@rechain/utils": "workspace:^",
+    "@trpc/server": "next",
+    "superjson": "^2.2.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@rechain/eslint": "workspace:^",
+    "@rechain/tsconfig": "workspace:^"
+  }
+}

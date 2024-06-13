@@ -1,0 +1,20 @@
+{
+  "name": "@rechain/docs",
+  "version": "0.3.3",
+  "private": true,
+  "description": "Documentation website for Rechain using Mintlify",
+  "license": "MIT",
+  "author": "Rechain",
+  "type": "module",
+  "scripts": {
+    "dev": "mintlify dev --port=3002"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ajv": "^8.16.0",
+    "mintlify": "^4.0.167"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

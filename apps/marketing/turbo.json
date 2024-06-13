@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "lint": {
+      "dependsOn": ["^build", "build"]
+    },
+    "build": {
+      "outputs": [".astro/**", "dist/**"],
+      "passThroughEnv": ["PUBLIC_POSTHOG_KEY", "PUBLIC_POSTHOG_HOST"]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Rechain",
+  "logo": {
+    "dark": "/logo/rechain-dark.svg",
+    "light": "/logo/rechain-light.svg"
+  },
+  "favicon": "/rechain-favicon.svg",
+  "colors": {
+    "primary": "#202020",
+    "light": "#EEEEEE",
+    "dark": "#202020",
+    "background": {
+      "dark": "#111111",
+      "light": "#FCFCFC"
+    },
+    "anchors": {
+      "from": "#222222",
+      "to": "#3A3A3A"
+    }
+  },
+  "topbarLinks": [],
+  "tabs": [],
+  "anchors": [
+    {
+      "name": "Github",
+      "icon": "github",
+      "url": "https://github.com/ahmedhesham6/rechain"
+    },
+    {
+      "name": "X / Twitter",
+      "icon": "x-twitter",
+      "url": "https://x.com/AhmedEtcho"
+    },
+    {
+      "name": "Become a sponsor",
+      "icon": "heart",
+      "url": "https://github.com/sponsors/ahmedhesham6"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "installation", "commands"]
+    },
+    {
+      "group": "Decision Reasoning",
+      "pages": ["decision-reasoning/why-all-built"]
+    },
+    {
+      "group": "Technologies",
+      "pages": ["technologies/playwright"]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/AhmedEtcho",
+    "github": "https://github.com/ahmedhesham6/rechain"
+  }
+}
